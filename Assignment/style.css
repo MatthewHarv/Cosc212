@@ -1,0 +1,405 @@
+/*
+Matthew Harvey Comp 212 Assignment 1 2017
+CSS
+ */
+
+
+/*
+Sets the background colour and minimum width of the content
+ */
+
+body {
+    color: black;
+    background-color: rgb(102, 153, 255);
+    overflow-y: scroll;
+    font-family: "Times New Roman", Times, serif;
+    min-width: 880px;
+}
+
+nav {
+    text-align: center;
+    margin-right: 40px;
+}
+
+
+/* Sets the style and colour of the navigation buttons */
+
+nav li {
+    background-color: rgb(26, 178, 255);
+    color: white;
+    border-color: black;
+    border-radius: 15px;
+    padding: 10px 0px 10px 0px;
+    display: inline;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: 10px;
+}
+
+
+/* Used to increase the size of the buttons and make it easier to click */
+
+nav a {
+    padding: 20px;
+}
+
+
+/* Sets the font and style of the header */
+
+h1 {
+    font-size: 36px;
+    background-color: #80ccff;
+    color: black;
+    margin: auto;
+    text-align: center;
+    padding: 5px 15px 5px 15px;
+    border: 2px solid;
+}
+
+
+/* The main content of the page controlling the border and width */
+
+#content {
+    width: 80%;
+    background-color: rgb(153, 187, 255);
+    margin: auto;
+    padding: 15px;
+    border: 5px solid;
+    color: inherit;
+}
+
+
+/*
+By the default, the save button is hidden as no content is selected
+ */
+
+.save {
+    display: none;
+}
+
+
+/*
+Sets a border for the map
+ */
+
+#mapid {
+    border: 2px solid;
+}
+
+.table {
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    min-width: 100%;
+    height: 140;
+    font-size: 15px;
+    line-height: 20px;
+    padding-top: 22px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.table > div {
+    position: relative;
+    height: 100%;
+    padding-top: 20px;
+    color: #050505;
+    background-color: black;
+}
+
+.table > div > div {
+    max-height: 100%;
+    overflow: scroll;
+    border: 1px solid black;
+}
+
+.table > div > div > table {
+    width: 100%;
+    border-spacing: 0;
+    margin-top: -23px;
+}
+
+.table > div > div > table > caption {
+    position: absolute;
+    top: -23px;
+    /*inverse of caption height*/
+    margin-top: -1px;
+    /*inverse of border-width*/
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table > div > div > table > * > tr > * {
+    padding: 0;
+}
+
+.table > div > div > table > thead {
+    vertical-align: bottom;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.table > div > div > table > thead > tr > * > div {
+    display: inline-block;
+    padding: 0 6px 0 6px;
+    /*header cell padding*/
+}
+
+.table > div > div > table > thead > tr >:first-child:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    /*match column header height*/
+    border-left: 1px solid black;
+    /*leftmost header border*/
+}
+
+
+/*
+Used to set the color and position of table title labels
+ */
+
+.table > div > div > table > thead > tr > * > div[label]:before,
+.table > div > div > table > thead > tr > * > div > div:first-child,
+.table > div > div > table > thead > tr > * +:before {
+    position: absolute;
+    top: 0;
+    white-space: pre-wrap;
+    color: white;
+    background-color: black;
+}
+
+.table > div > div > table > thead > tr > * > div[label]:before,
+.table > div > div > table > thead > tr > * > div[label]:after {
+    content: attr(label);
+}
+
+
+/*
+Sets the background of the table
+ */
+
+.table > div > div > table > tbody > tr {
+    background-color: white;
+    color: black;
+}
+
+
+/*
+Sets all even table elements to a light gray background
+ */
+
+.table > div > div > table > tbody > tr:nth-child(even) {
+    background: lightgray;
+    color: black;
+}
+
+.table > div > div > table > tbody > tr > * + * {
+    border-left: 1px solid black;
+}
+
+table {
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+
+/* closes the gaps in the table */
+
+table,
+th,
+td {
+    border-collapse: collapse;
+}
+
+
+/* sets padding on the table and centers its contents */
+
+th,
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+
+/* sets table colour*/
+
+table tr:nth-child(even) {
+    color: inherit;
+    background-color: #00cfd6;
+}
+
+
+/* sets table colour with alternating rows*/
+
+table tr:nth-child(odd) {
+    color: inherit;
+    background-color: #2bbec4;
+}
+
+
+/* sets table title color*/
+
+table th {
+    background-color: #1d9b54;
+    color: #ffffff;
+}
+
+
+/* Form layout. Centers and spaces out the labels*/
+
+.textStyles label {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Form layout. Centers and spaces out the inputs*/
+
+.textStyles input {
+    display: block;
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2px;
+}
+
+
+/* Spreads the input form out */
+
+.textStyles li {
+    padding-bottom: 10px;
+}
+
+
+/* Sets the style and font of the form title */
+
+legend {
+    background-color: #25d1ae;
+    padding: 3px;
+    border: 2px solid;
+    color: inherit;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+#legendbuttons {
+    background-color: #25d1ae;
+    padding: 3px;
+    border: 2px solid;
+    color: inherit;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* removes bullet points */
+
+#map {
+    border: 2px solid;
+}
+
+
+/* Form layout. Centers and spaces out the labels*/
+
+.textInputs label {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Form layout. Centers and spaces out the inputs*/
+
+.textInputs input {
+    display: block;
+    text-align: center;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2px;
+}
+
+
+/* Spreads the input form out */
+
+.textInputs li {
+    padding-bottom: 10px;
+}
+
+
+/* Sets the style and font of the form title */
+
+.textInputs legend {
+    background-color: #25d1ae;
+    padding: 3px;
+    border: 2px solid;
+    color: inherit;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* removes bullet points */
+
+ul {
+    list-style-type: none;
+}
+
+
+/* Sets the position and colour of the buttoms of the form */
+
+#formControls input {
+    background-color: #49a2ff;
+    color: white;
+    border-radius: 15px;
+    display: inline;
+    font-weight: bold;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+}
+
+
+/* Sets back ground and colour of the fourm */
+
+fieldset {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 5px;
+    background-color: #99ccff;
+    color: inherit;
+    text-align: center;
+}
+
+
+/* Used to hide the form header for the submit/reset buttons */
+
+.invisible {
+    display: none;
+}
+
+input {
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2px;
+}
